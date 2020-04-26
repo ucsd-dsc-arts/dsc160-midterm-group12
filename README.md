@@ -7,7 +7,7 @@ Project Team Members:
 - Myra Haider, name2@ucsd.edu
 - Enrique Sanchez, name3@ucsd.edu
 - Mariam Qader, name4@ucsd.edu
-- Alexandria Kim, name5@ucsd.edu
+- Alexandria Kim, aek005@ucsd.edu
 
 ## Abstract
 
