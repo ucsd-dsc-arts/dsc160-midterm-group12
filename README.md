@@ -19,6 +19,9 @@ Our research question is: Can we make a classifier that can correctly identify M
 
 We will be using a variety of different analyses. We plan to use date data, edge detection, face detection, and a variety of other types of analysis to best fit a classifier. Many of the techniques and libraries demonstrated in class will be used to extract these features. Libraries like skimage, scipy, and cv2 may be used – it all depends on the features we find to be important. Of course, other libraries like pandas and numpy. Results will be in the form charts and images. Charts will be used to assess the quality/power of the classifier built. Images will be used to depict the art of Monet over time. We are going to utilize the various image techniques used in class to generate features for Monet’s artwork and train a model to classify those works of art into their respective category. A classifier for images was not covered in class so this extension should be interesting and a good learning experience. 
 
+ 
+1: https://www.biography.com/artist/claude-monet
+
 
 ## Data
 
