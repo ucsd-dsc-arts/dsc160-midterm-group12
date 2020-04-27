@@ -6,8 +6,8 @@ Project Team Members:
 - Molly Rowland, mhrowlan@ucsd.edu
 - Myra Haider, name2@ucsd.edu
 - Enrique Sanchez, name3@ucsd.edu
-- Mariam Qader, name4@ucsd.edu
-- Alexandria Kim, name5@ucsd.edu
+- Mariam Qader, maqader@ucsd.edu
+- Alexandria Kim, aek005@ucsd.edu
 
 ## Abstract
 
