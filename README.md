@@ -15,6 +15,7 @@ Project Team Members:
 
 For the project proposal, please write a short abstact addressing the questions below. You should replace the entire contents of this section with one to two paragraphs addressing the following:
 
+One interesting thing about studying art is how art is able to develop over time. 
 - What is the data set that you are going to analyze?
 - What is your research question? 
 - What is your hypothesis about the results? 
