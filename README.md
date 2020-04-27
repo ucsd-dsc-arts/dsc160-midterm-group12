@@ -4,8 +4,8 @@ DSC160 Data Science and the Arts - Midterm Project Repository - Spring 2020
 
 Project Team Members: 
 - Molly Rowland, mhrowlan@ucsd.edu
-- Myra Haider, name2@ucsd.edu
-- Enrique Sanchez, name3@ucsd.edu
+- Myra Haider, myhaider@ucsd.edu
+- Enrique Sanchez, ens004@ucsd.edu
 - Mariam Qader, maqader@ucsd.edu
 - Alexandria Kim, aek005@ucsd.edu
 
