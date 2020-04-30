@@ -33,6 +33,11 @@ This section will describe your data and its origins. Each item should contain a
 - Who created the works? 
 - Is it digital native, or is it some kind of scan, recording, photo, etc., of an analog form? 
 
+** Claude Monet Artworks Data Set**
+Source: https://www.wikiart.org/en/claude-monet/all-works
+
+The data set we will be working with is a complete set of artworks created by the famous French painter, Claude Monet. These works are freely available on www.wikiart.org. The data set consists of 1,369 artworks that were created between the years of 1858 and 1926. Much information is available for each of the works including its title, date of creation, style, genre, and a series of tags related to it. Given that these works were painted and needed to become available in a digital format, photos of the works were taken. The resolution of the images varies across each work. The quality and accuracy of the works are maintained by editors. 
+
 ## Code
 
 (20 points)
