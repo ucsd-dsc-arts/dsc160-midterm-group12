@@ -13,21 +13,32 @@ import skimage
 import numpy as np
 import os
 
-
 def calc_stats(img_fp):
     """
-    Calculates height, width, mean hue, saturation, 
-    value, and the energy of an image.
+    Calculates height, width of an image and appends them to lists declared outside of the function.
     
     :param img_fp: Filepath to image
     :returns: List containing image statistics
+    
     """
+    if img_fp in names:
+        return
+        
     
     image = io.imread(img_fp)
 
     # Getting width and height of image
-    height, width, _ = image.shape
+    height, width, z = image.shape
     
+    
+    heights.append(height)
+    widths.append(width)
+
+def features_pt2(img_fp):
+    """
+    appends mean hues, mean saturation, mean value, and mean energy of an image to lists declared outside of function
+    """
+    image = io.imread(img_fp)
     # Converting image to HSV
     hsv_img = rgb2hsv(image)
     
@@ -56,6 +67,8 @@ def calc_stats(img_fp):
     dualEnergy = np.sum(deltaX, axis=2)+np.sum(deltaY, axis=2)
     
     mean_energy = np.mean(dualEnergy)
-    
-    return [height, width, mean_hue, mean_saturation, 
-            mean_value, mean_energy]
+
+    mean_hues.append(mean_hue)
+    mean_saturations.append(mean_saturation)
+    mean_values.append(mean_value)
+    mean_energies.append(mean_energy)

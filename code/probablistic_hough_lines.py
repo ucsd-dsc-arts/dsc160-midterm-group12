@@ -13,7 +13,7 @@ def calc_edges(img_fp):
     """
     Calculating Probablistic Hough Lines 
     
-    return nested array of line patterns
+    appends number of lines to list declared outside of function
     """
     image = io.imread(img_fp)
 
@@ -44,8 +44,13 @@ def calc_edges(img_fp):
     
     lines = cv2.HoughLinesP(edges,1,np.pi/180,100,minLineLength,maxLineGap)
     result = image.copy()
-    for x in range(0, len(lines)):    
-        for x1,y1,x2,y2 in lines[x]:
-            cv2.line(result,(x1,y1),(x2,y2),(0,255,255),5)
-    return result[:,:,::]
+    if lines is None:
+        num_edge=0
+    else:   
+        for x in range(0, len(lines)):    
+            for x1,y1,x2,y2 in lines[x]:
+                cv2.line(result,(x1,y1),(x2,y2),(0,255,255),5)
+                num_edge=len(result[:,:,::])
+        
+    edges_.append(num_edge) 
     
