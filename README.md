@@ -68,18 +68,19 @@ For our project we chose to analyze Monet’s work and create a genre classifier
 
 Our first notebook [Monet_Work_through_the_Decades.ipynb](notebooks/Monet_Work_through_the_Decades.ipynb), explores Monet’s paintings by time.
 
+After looking at the hue, brightness and saturation bitmaps, it is clear that there are no drastic changes in Monet's work after the 1910s. However, there were some slight noticable differences. After the 1910's, the mean hue of Monet's paintings were lower. When looking at the graph we can see that there were no longer any painting which had a lot of blue/pink colors but instead most of his painting were more red/green. When looking at the mean value graph, we can also see that his works were not as bright. All of his art works in the prior decades contained very bright images, but after the 1910's those disappear. Also, after the 1910's, Monet had a decrease in the number of lowly saturated paintings he created. When looking at the last graph we can see that the range of saturation for his art starts at a lower and more saturated level. This makes sense considering the brightness is also decreased. It seems like after all of his setback, Monet created paintings with a darker tone to them based on thse qualities. It seems the tragedies he faced did have a effect on the brightness and color of his paintings. We expected to see a slight change in the quality of his work after those troubling times.
+
 **Classifier**
 
 Our next notebook explores the classifier side of our analysis.  
 
 [Claude_Monet_Genre_Classifier.ipynb](notebooks/Claude_Monet_Genre_Classifier.ipynb) explores a variety of different classifiers for our image data set. For an in depth description of the classifier results, please visit the discussion section at the bottom of the linked notebook.
 
+After running each of the models and assessing the results, we have determined that the Random Forest model was the best for the purpose of classifying Claude Monet's work. It had the highest accuracy as it ranged from 75-79%. The other models ranged from the low 60s to the low 70s. The Random Forest model also had the most reliable class accuracies. It was able to do a good job for the 'landscape' and 'flower painting' genres. It did a decent job on the 'cityscape' genre and a poor job on the 'people' genre. On the other hand, the K Nearest Neighbors, Support Vector Machine, and Naive Bayes models all primarily classified the images as 'landscape' which was the largest genre in the data set (made up 60%). This made them all perform poorly on the other genres. Logistic Regression performed better than these three but fell short of beating the Random Forest model.
 
-This section will contain links to documentation of your results. This can include figures, sound files, videos, bitmaps, as appropriate to your domain of analysis. Each result should include a brief textual description, and all should be listed below:
+To determine if the Random Forest model is respectable, we can make a few comparisons. If a trivial classifier that classified each image uniformly was built, we would expect an accuracy of 25%. If another classifier that classified each image as 'landscape' was made, we would achieve an accuracy of 60%. Given that the model constructed above beats these metrics by a large margin, we have reason to believe that the model did indeed learn from the features we engineered and could distinguish different genres. Of course, there are issues with the model. For example, the model did poorly in classifying the 'people' genre. This could be a problem with the data however as it could simply be that the images in that genre are just similar to those in the other genres, so the model has a hard time distinguishing them. We initially believed that maybe this was due to the fact that we grouped a few genres into the 'people' genre. However, after rerunning the models, it appears that this did not affect the model.
 
-- image files (`.jpg`, `.png` or whatever else is appropriate)
-- audio files (`.wav`, `.mp3`)
-- written text as `.pdf`
+Overall, we are pretty happy with these results. It exceeded the accuracy we anticipated, and it showed promise in being able to classify Monet's work.
 
 ## Discussion
 
