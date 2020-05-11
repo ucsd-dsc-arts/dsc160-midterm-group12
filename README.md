@@ -49,15 +49,13 @@ In the web scraping notebook, we ran all of the functions as defined by the scri
 
 [Probablistic_hough_lines.py](code/probablistic_hough_lines.py): counts number of edges as defined by minLineLength =400 and maxLineGap=10
 
-**Analysis**
-
-[TODO]
 
 **Model Building**
 
 When building the model, we cleaned the dataframe to only include variables that we deemed meaningful and useful for our classification. Therefore, we omitted the name and style columns, as the goal of the classifier is to predict genre by image features. We also removed images from the dataset that didn’t fall into our main categories: landscape, cityscape, flower painting, or people. This left us with 1311 images for our classifier. Next, to clean our data, we grouped images into decades rather than individual years, and one hot encoded the decade categoried to make the data more usable for the classifier. We ordinally encoded the genre options as well. We then created a logistic regressor, a K-nearest neighbors regressor, a SVM, a Naive Bayes classifier, and a random forest classifier. 
 
 Claude_Monet_Genre_Classifier.ipynb: cleaning the dataset for model creation and testing
+
 
 
 ## Results
@@ -73,6 +71,12 @@ Our first notebook [Monet_Work_through_the_Decades.ipynb](notebooks/Monet_Work_t
 Our next notebook explores the classifier side of our analysis.  
 
 [Claude_Monet_Genre_Classifier.ipynb](notebooks/Claude_Monet_Genre_Classifier.ipynb) explores a variety of different classifiers for our image data set. For an in depth description of the classifier results, please visit the discussion section at the bottom of the linked notebook.
+
+After running each of the models and assessing the results, we have determined that the Random Forest model was the best for the purpose of classifying Claude Monet's work. It had the highest accuracy as it ranged from 75-79%. The other models ranged from the low 60s to the low 70s. The Random Forest model also had the most reliable class accuracies. It was able to do a good job for the 'landscape' and 'flower painting' genres. It did a decent job on the 'cityscape' genre and a poor job on the 'people' genre. On the other hand, the K Nearest Neighbors, Support Vector Machine, and Naive Bayes models all primarily classified the images as 'landscape' which was the largest genre in the data set (made up 60%). This made them all perform poorly on the other genres. Logistic Regression performed better than these three but fell short of beating the Random Forest model.
+
+To determine if the Random Forest model is respectable, we can make a few comparisons. If a trivial classifier that classified each image uniformly was built, we would expect an accuracy of 25%. If another classifier that classified each image as 'landscape' was made, we would achieve an accuracy of 60%. Given that the model constructed above beats these metrics by a large margin, we have reason to believe that the model did indeed learn from the features we engineered and could distinguish different genres. Of course, there are issues with the model. For example, the model did poorly in classifying the 'people' genre. This could be a problem with the data however as it could simply be that the images in that genre are just similar to those in the other genres, so the model has a hard time distinguishing them. We initially believed that maybe this was due to the fact that we grouped a few genres into the 'people' genre. However, after rerunning the models, it appears that this did not affect the model.
+
+Overall, we are pretty happy with these results. It exceeded the accuracy we anticipated, and it showed promise in being able to classify Monet's work.
 
 
 This section will contain links to documentation of your results. This can include figures, sound files, videos, bitmaps, as appropriate to your domain of analysis. Each result should include a brief textual description, and all should be listed below: 
