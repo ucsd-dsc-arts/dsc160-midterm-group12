@@ -84,7 +84,13 @@ After looking at the hue, brightness and saturation bitmaps, it is clear that th
 
 Our next notebook explores the classifier side of our analysis.  
 
-[Claude_Monet_Genre_Classifier.ipynb](notebooks/Claude_Monet_Genre_Classifier.ipynb) explores a variety of different classifiers for our image data set. For an in depth description of the classifier results, please visit the discussion section at the bottom of the linked notebook.
+[Claude_Monet_Genre_Classifier.ipynb](notebooks/Claude_Monet_Genre_Classifier.ipynb) explores a variety of different classifiers for our image data set. 
+
+Here are the final results:
+
+<img src="results/raw_accuracy.jpg" width="500">
+
+<img src="results/class_accuracy.jpg" width="500">
 
 After running each of the models and assessing the results, we have determined that the Random Forest model was the best for the purpose of classifying Claude Monet's work. It had the highest accuracy as it ranged from 75-79%. The other models ranged from the low 60s to the low 70s. The Random Forest model also had the most reliable class accuracies. It was able to do a good job for the 'landscape' and 'flower painting' genres. It did a decent job on the 'cityscape' genre and a poor job on the 'people' genre. On the other hand, the K Nearest Neighbors, Support Vector Machine, and Naive Bayes models all primarily classified the images as 'landscape' which was the largest genre in the data set (made up 60%). This made them all perform poorly on the other genres. Logistic Regression performed better than these three but fell short of beating the Random Forest model.
 
