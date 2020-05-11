@@ -12,7 +12,7 @@ Project Team Members:
 ## Abstract
 
 For our project we are interested in analyzing Monet’s art. On the wiki art page, many of the different works are classified into different categories (ie. genres, styles, medai). We are interested to see if we can make a classifier to be able to group the different works together, such as by landscapes, flowers, and many more. For this specific classifier, we would like to be able to classify Monet’s paintings into four categories: landscape, cityscape, flower painting, people. We think by limiting the amount of categories we will be able to make a more accurate model based on the size of the training data. According to his biography1, Monet struggled with depression, poverty, and illness throughout his life. It would be interesting to see how these hardships may have affected his art and if this can be assessed analytically.
-Our research question is: Can we make a classifier that can correctly identify Monet’s paintings into categories as defined on the wiki art website? We hypothesize that our classifier will have an accuracy score of roughly 60%.
+Our research question is: **Can we make a classifier that can correctly identify Monet’s paintings into categories as defined on the wiki art website?** We hypothesize that our classifier will have an accuracy score of roughly 60%.
 
 We will be using a variety of different analyses. We plan to use date data, edge detection, face detection, and a variety of other types of analysis to best fit a classifier. Many of the techniques and libraries demonstrated in class will be used to extract these features. All the used libraries are listed in the technical notes section. Results will be in the form charts and images. Charts will be used to assess the quality/power of the classifier built. Images will be used to depict the art of Monet over time. We are going to utilize the various image techniques used in class to generate features for Monet’s artwork and train a model to classify those works of art into their respective category. A classifier for images was not covered in class so this extension should be interesting and a good learning experience.
 
@@ -50,7 +50,7 @@ In the web scraping notebook, we ran all of the functions as defined by the scri
 
 **Time Analysis**
 
-To analyze Monet's work over time, we wanted to plot Monet's figures. After collecting all of his paintings as thumbnails, we categorized them into decades for easier analysis of his work through time. We created several graphs including the mean hue, mean value, and mean saturation. Each of these were plotted against the decade in which the painting was created. This made for simply visualizations to compare Monet's paintings through time.
+To analyze Monet's work over time, we wanted to plot Monet's figures. After collecting all of his paintings as thumbnails, we categorized them into decades for easier analysis of his work through time. We created several graphs including the mean hue, mean value, and mean saturation. Each of these were plotted against the decade in which the painting was created. This made for simple visualizations to compare Monet's paintings through time.
 
 
 **Model Building**
@@ -102,7 +102,7 @@ Molly: Wrote code to run facial and edge analysis. Created dataframe/csv from co
 
 Mariam: Analyzing work through the decades.
 
-Alexandria: Time analysis. Discussion section describing time analysis.
+Alexandria: Time analysis. Wrote discussion section.
 
 
 ## Technical Notes and Dependencies
@@ -110,11 +110,7 @@ Alexandria: Time analysis. Discussion section describing time analysis.
 For our project, we used libraries that have been previously included in this class. This includes: BeautifulSoup, os, request, pandas, multiple packages from skimage, numpy, scipy, matplotlib, PIL Image, and cv2. These packages allowed us to analyze our images to make our classifier.
 
 
-## Reference
-
-References to any papers, techniques, repositories you used:
-- Papers
-- Repositories
-- Blog posts
+## References
 
 - Used to find background information of Monet's hardships through life. Used in the Monet through the decades notebook. https://www.smh.com.au/entertainment/art-and-design/claude-monet-20160920-grk00i.html
+- Further background on Monet https://www.biography.com/artist/claude-monet
