@@ -52,7 +52,7 @@ Model.ipynb: cleaning the dataset for model creation and testing
 
 For our project we chose to analyze Monet’s work and create a genre classifier for his works. 
 Our first notebook Monet_Work_through_the_Decades.ipynb, explores Monet’s paintings by time. 
-Our next notebook explores the classifier side of our analysis.  Claude_Monet_Genre_Classifier.ipynb explores a variety of different classifiers for our image set. 
+Our next notebook explores the classifier side of our analysis.  [Claude_Monet_Genre_Classifier.ipynb](/../notebook) explores a variety of different classifiers for our image set. 
 
 
 This section will contain links to documentation of your results. This can include figures, sound files, videos, bitmaps, as appropriate to your domain of analysis. Each result should include a brief textual description, and all should be listed below: 
