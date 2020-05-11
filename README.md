@@ -52,7 +52,8 @@ In the web scraping notebook, we ran all of the functions as defined by the scri
 
 **Time Analysis**
 
-To analyze Monet's work over time, we wanted to plot Monet's figures. After collecting all of his paintings as thumbnails, we categorized them into decades for easier analysis of his work through time. We created several graphs including the mean hue, mean value, and mean saturation. Each of these were plotted against the decade in which the painting was created. This made for simply visualizations to compare Monet's paintings through time. 
+To analyze Monet's work over time, we wanted to plot Monet's figures. After collecting all of his paintings as thumbnails, we categorized them into decades for easier analysis of his work through time. We created several graphs including the mean hue, mean value, and mean saturation. Each of these were plotted against the decade in which the painting was created. This made for simply visualizations to compare Monet's paintings through time.
+
 
 **Model Building**
 
@@ -84,12 +85,11 @@ This section will contain links to documentation of your results. This can inclu
 
 ## Discussion
 
-Our time analyses are culturally significant because we are taking into account the artist's emotions and life events. Though Monet's works are valuable in themselves, it is important to recognize the person behind these masterpieces. By looking at the artist behind the work, we are highlighting the human aspect of art. Many might argue that this aspect is something that can not be replicated even in the work of generative art. We wanted to fully value Money by analyzing how emotions come into play when creating his paintings.
+Our time analyses are culturally significant because we are taking into account the artist's emotions and life events. Though Monet's works are valuable in themselves, it is important to recognize the person behind these masterpieces. By looking at the artist behind the work, we are highlighting the human aspect of art. Many might argue that this aspect is something that can not be replicated even in the work of generative art. We wanted to fully value Monet by analyzing how emotions come into play when creating his paintings.
 
-Similarly, we believe that original artists would respond well to this type of analysis. We have acknowledged the process behind a painting versus simply the final outcome. I believe artists would appreciate that our analyses took into account the whole person and not just the art itself. Art can be a representation of emotion -- a way for the artist to express themselves at the time. Whether these emotions be positive or negative, it can be important to recognize the intent behind the art to fully appreciate it.
+Similarly, we believe that original artists would respond well to this type of analysis. We have acknowledged the process behind a painting versus simply the final outcome. I believe artists would appreciate that our analyses took into account the whole person and not just the art itself. Art can be a representation of emotion -- a way for the artist to express themselves at the time. Whether these emotions be positive or negative, it can be important to recognize the intent behind the art to fully appreciate and/or understand it.
 
-Future work could include a more detailed look into a specific time period of Monet's lifetime. As we saw in the notebook, Monet_Work_through_the_Decade.ipynb, it could be valuable to look into the individual years across the decade from 1905-1915. We might be able to see a change in the paintings in the individual years that Monet experienced difficult hardships. Though we didn't see a drastic change in the decades as a whole, there might be changes in the paintings in the years that made up these decades that align with the emotional turmoil Monet was experiencing.
-
+Future work could include a more detailed look into a specific time period of Monet's lifetime. As we saw in the notebook, Monet_Work_through_the_Decade.ipynb, it could be valuable to look into the individual years across the decade from 1905-1915. We might be able to see a change in the paintings in the individual years that Monet experienced difficult hardships due to personal relationships and his mental health. Though we didn't see many drastic changes in the decades as a whole, there might be some changes in the paintings in the years that made up these decades that align with the emotional turmoil Monet was experiencing. These changes could have been missed due to binning the paintings into decades instead of looking at the individual years.
 
 
 (30 points, three to five paragraphs)
