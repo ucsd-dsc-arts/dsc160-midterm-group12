@@ -23,8 +23,9 @@ We will be using a variety of different analyses. We plan to use date data, edge
 ## Data
 
 **Claude Monet Artworks Data Set**
-Claude Monet Artworks Data Set
+
 Source: https://www.wikiart.org/en/claude-monet/all-works
+
 The data set we will be working with is a complete set of artworks created by the famous French painter, Claude Monet. These works are freely available on www.wikiart.org. The data set consists of 1,365 artworks that were created between the years of 1858 and 1926. Much information is available for each of the works including its title, date of creation, style, genre, and a series of tags related to it. Given that these works were painted and needed to become available in a digital format, photos of the works were taken. The resolution of the images varies across each work. The quality and accuracy of the works are maintained by editors.
 
 
@@ -38,9 +39,13 @@ In our repo we have a handful of different files. The first step in building our
 In the web scraping notebook, we ran all of the functions as defined by the script files. The first step was actually web scraping the images and metadata from wiki art. Each iteration was appended to a list and at the end of the web scraping execution, was turned into a dataframe. Additional columns were added onto the dataframe after the feature extractions were run, resulting in a 1365 row dataframe with 11 columns. 
 
 [Webscraping.ipynb](code/webscraping.ipynb): running web scraping and feature extracting codes
+
 [Facial_rec.py](code/Facial_rec.py): code to determine if there is a face or not
+
 [Features.py](code/features.py): extracts mean hue, mean saturation, mean value, height, width, and mean energy
+
 [Infoscrape.py](code/infoscrape.py): all the code for web scraping that was run in the notebook
+
 [Probablistic_hough_lines.py](code/probablistic_hough_lines.py): counts number of edges as defined by minLineLength =400 and maxLineGap=10
 
 When building the model, we cleaned the dataframe to only include variables that we deemed meaningful and useful for our classification. Therefore, we omitted the name and category columns, as the goal of the classifier is to predict genre by image features. We also removed images from the dataset that didn’t fall into our main categories: landscape, cityscape, flower painting, or people. This left us with 1311 images for our classifier. Next, to clean our data, we grouped images into decades rather than individual years, and one hot encoded the data to make the data more usable for the classifier. We ordinally encoded the genre options as well. We created a logistic regressor, a K-nearest neighbors regressor, a SVM, a Naive Bayes classifier, and a random forest classifier. 
@@ -77,8 +82,11 @@ The subsequent paragraphs could address questions including:
 ## Team Roles
 
 Myra: Wrote code to web scrape images.
-Enrique: Wrote code to web scrape time, categories, genres, and image features. Created model. 
-Molly: Wrote code to run facial and edge analysis. Created dataframe/csv from compiled web scraping code and image processing to be used in classifier. Updated Abstract and wrote code, and technical notes and dependencies sections.    
+
+Enrique: Wrote code to web scrape time, categories, genres, and generate image features. Created model and the notebook Claude_Monet_Genre_Classifier.ipynb. Wrote description of data set.
+
+Molly: Wrote code to run facial and edge analysis. Created dataframe/csv from compiled web scraping code and image processing to be used in classifier. Updated Abstract and wrote code, and technical notes and dependencies sections.
+
 Mariam: Analyzing work through the decades.
 
 
