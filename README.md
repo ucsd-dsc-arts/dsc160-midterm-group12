@@ -54,6 +54,7 @@ In the web scraping notebook, we ran all of the functions as defined by the scri
 [TODO]
 
 **Model Building**
+
 When building the model, we cleaned the dataframe to only include variables that we deemed meaningful and useful for our classification. Therefore, we omitted the name and style columns, as the goal of the classifier is to predict genre by image features. We also removed images from the dataset that didn’t fall into our main categories: landscape, cityscape, flower painting, or people. This left us with 1311 images for our classifier. Next, to clean our data, we grouped images into decades rather than individual years, and one hot encoded the decade categoried to make the data more usable for the classifier. We ordinally encoded the genre options as well. We then created a logistic regressor, a K-nearest neighbors regressor, a SVM, a Naive Bayes classifier, and a random forest classifier. 
 
 Claude_Monet_Genre_Classifier.ipynb: cleaning the dataset for model creation and testing
