@@ -37,11 +37,11 @@ We used a variety of different image analyzing techniques to build our classifie
 In our repo we have a handful of different files. The first step in building our classifier was getting our image set. We scrapped 1365 Monet images from the Wiki art. Our web scraping function collected, the image path to download, the date, style, and genre. The date and style will be features in our classifier, while we will use genre as our target for classification. From the images themselves we collected image height, width, mean hue, mean saturation, mean value, mean energy, edge count, and whether or not a face was detected. 
 In the web scraping notebook, we ran all of the functions as defined by the script files. The first step was actually web scraping the images and metadata from wiki art. Each iteration was appended to a list and at the end of the web scraping execution, was turned into a dataframe. Additional columns were added onto the dataframe after the feature extractions were run, resulting in a 1365 row dataframe with 11 columns. 
 
-[Webscraping.ipynb](code/Webscraping.ipynb): running web scraping and feature extracting codes
+[Webscraping.ipynb](code/webscraping.ipynb): running web scraping and feature extracting codes
 [Facial_rec.py](code/Facial_rec.py): code to determine if there is a face or not
-[Features.py](code/Features.py): extracts mean hue, mean saturation, mean value, height, width, and mean energy
-[Infoscape.py](code/Infoscape.py): all the code for web scraping that was run in the notebook
-[Probablistic_hough_lines.py](code/Probablistic_hough_lines.py): counts number of edges as defined by minLineLength =400 and maxLineGap=10
+[Features.py](code/features.py): extracts mean hue, mean saturation, mean value, height, width, and mean energy
+[Infoscape.py](code/infoscape.py): all the code for web scraping that was run in the notebook
+[Probablistic_hough_lines.py](code/probablistic_hough_lines.py): counts number of edges as defined by minLineLength =400 and maxLineGap=10
 
 When building the model, we cleaned the dataframe to only include variables that we deemed meaningful and useful for our classification. Therefore, we omitted the name and category columns, as the goal of the classifier is to predict genre by image features. We also removed images from the dataset that didn’t fall into our main categories: landscape, cityscape, flower painting, or people. This left us with 1311 images for our classifier. Next, to clean our data, we grouped images into decades rather than individual years, and one hot encoded the data to make the data more usable for the classifier. We ordinally encoded the genre options as well. We created a logistic regressor, a K-nearest neighbors regressor, a SVM, a Naive Bayes classifier, and a random forest classifier. 
 
