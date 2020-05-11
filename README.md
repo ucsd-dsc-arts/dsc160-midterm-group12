@@ -50,9 +50,9 @@ In the web scraping notebook, we ran all of the functions as defined by the scri
 
 [Probablistic_hough_lines.py](code/probablistic_hough_lines.py): counts number of edges as defined by minLineLength =400 and maxLineGap=10
 
-**Analysis**
+**Time Analysis**
 
-[TODO]
+To analyze Monet's work over time, we wanted to plot Monet's figures. After collecting all of his paintings as thumbnails, we categorized them into decades for easier analysis of his work through time. We created several graphs including the mean hue, mean value, and mean saturation. Each of these were plotted against the decade in which the painting was created. This made for simply visualizations to compare Monet's paintings through time. 
 
 **Model Building**
 
@@ -65,7 +65,7 @@ Claude_Monet_Genre_Classifier.ipynb: cleaning the dataset for model creation and
 
 For our project we chose to analyze Monet’s work and create a genre classifier for his works.
 
-**Analysis**
+**Time Analysis**
 
 Our first notebook [Monet_Work_through_the_Decades.ipynb](notebooks/Monet_Work_through_the_Decades.ipynb), explores Monet’s paintings by time.
 
@@ -114,7 +114,7 @@ Molly: Wrote code to run facial and edge analysis. Created dataframe/csv from co
 
 Mariam: Analyzing work through the decades.
 
-Alexandria: Discussion section describing time analysis.
+Alexandria: Time analysis. Discussion section describing time analysis.
 
 
 ## Technical Notes and Dependencies
