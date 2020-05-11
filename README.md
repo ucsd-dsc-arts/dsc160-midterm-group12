@@ -1,4 +1,4 @@
-# Project Title
+# Analyzing Monet's Work through Time and Genre
 
 DSC160 Data Science and the Arts - Midterm Project Repository - Spring 2020
 
