@@ -72,6 +72,12 @@ In the 1910's, Monet faced many tragedies that affected his mental state. In 191
 
 After facing so many devastating setbacks, it would be hard for anyone to be the same person. Through learning about all these misfortunes, we wanted to look to see if there was a qualitative change in Monet's work. Through making maps that graph the mean saturation, brightness and hue of his paintings through the decades, we want to see if there is a noticeable change after the 1910s.
 
+<img src="results/meansaturation.png" width="500">
+
+<img src="results/meanvalue.png" width="500">
+
+<img src="results/meanhue.png" width="500">
+
 After looking at the hue, brightness and saturation bitmaps, it is clear that there are no drastic changes in Monet's work after the 1910s. However, there were some slight noticable differences. After the 1910's, the mean hue of Monet's paintings were lower. When looking at the graph we can see that there were no longer any painting which had a lot of blue/pink colors but instead most of his painting were more red/green. When looking at the mean value graph, we can also see that his works were not as bright. All of his art works in the prior decades contained very bright images, but after the 1910's those disappear. Also, after the 1910's, Monet had a decrease in the number of lowly saturated paintings he created. When looking at the last graph we can see that the range of saturation for his art starts at a lower and more saturated level. This makes sense considering the brightness is also decreased. It seems like after all of his setback, Monet created paintings with a darker tone to them based on thse qualities. It seems the tragedies he faced did have a effect on the brightness and color of his paintings. We expected to see a slight change in the quality of his work after those troubling times.
 
 **Classifier**
