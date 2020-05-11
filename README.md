@@ -31,8 +31,6 @@ The data set we will be working with is a complete set of artworks created by th
 
 ## Code
 
-(20 points)
-
 **Web Scraping**
 
 We used a variety of different image analyzing techniques to build our classifier.
@@ -85,23 +83,13 @@ This section will contain links to documentation of your results. This can inclu
 
 ## Discussion
 
+Ultimately, our classifier worked better than expected. Though it had a slightly difficult time being able to classify people, overall it had a decent accuracy rate. This might show that Monet's works had a particular style that he followed consistently throughout his life. As a pioneer Impressionist, his style was distinct. Additionally, our look at Monet's work through the years showed slight variation after the year 1910, which aligned with our hypothesis. This analysis displays how life events can pave the road of an artist's creations. The mental state of an artist can affect their emotions and therefore affect their artwork.
+
 Our time analyses are culturally significant because we are taking into account the artist's emotions and life events. Though Monet's works are valuable in themselves, it is important to recognize the person behind these masterpieces. By looking at the artist behind the work, we are highlighting the human aspect of art. Many might argue that this aspect is something that can not be replicated even in the work of generative art. We wanted to fully value Monet by analyzing how emotions come into play when creating his paintings.
 
 Similarly, we believe that original artists would respond well to this type of analysis. We have acknowledged the process behind a painting versus simply the final outcome. I believe artists would appreciate that our analyses took into account the whole person and not just the art itself. Art can be a representation of emotion -- a way for the artist to express themselves at the time. Whether these emotions be positive or negative, it can be important to recognize the intent behind the art to fully appreciate and/or understand it.
 
 Future work could include a more detailed look into a specific time period of Monet's lifetime. As we saw in the notebook, Monet_Work_through_the_Decade.ipynb, it could be valuable to look into the individual years across the decade from 1905-1915. We might be able to see a change in the paintings in the individual years that Monet experienced difficult hardships due to personal relationships and his mental health. Though we didn't see many drastic changes in the decades as a whole, there might be some changes in the paintings in the years that made up these decades that align with the emotional turmoil Monet was experiencing. These changes could have been missed due to binning the paintings into decades instead of looking at the individual years.
-
-
-(30 points, three to five paragraphs)
-
-The first paragraph should be a short summary describing your results.
-
-The subsequent paragraphs could address questions including:
-- Why is this culturally relevant?
-- How does your computational approach differ from the traditional art historical, musicological, manual/subjective approach to analyzing your cultural subject?
-- How do you think the original artists/musicians would respond to this type of analysis? Would it change/inform their practice in some way?
-- How do your results relate to broader social, cultural, economic political, etc., issues?
-- In what future directions could you expand this work?
 
 
 ## Team Roles
