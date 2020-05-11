@@ -116,3 +116,5 @@ References to any papers, techniques, repositories you used:
 - Papers
 - Repositories
 - Blog posts
+
+- Used to find background information of Monet's hardships through life. Used in the Monet through the decades notebook. https://www.smh.com.au/entertainment/art-and-design/claude-monet-20160920-grk00i.html 
