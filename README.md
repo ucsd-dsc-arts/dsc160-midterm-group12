@@ -11,50 +11,49 @@ Project Team Members:
 
 ## Abstract
 
-(10 points) 
 
-For our project we are interested in analyzing Monet’s art. On the wiki art page, many of the different works are classified into different categories (ie. genres, styles, medai). We are interested to see if we can make a classifier to be able to group the different works together, such as by impressionism, landscapes, flowers, and many more. For this specific classifier, we would like to be able to classify Monet’s paintings into three categories: Architecture/man-made structures, people, flowers/nature. We think by limiting the amount of categories we will be able to make a more accurate model based on the size of the training data. According to his biography1, Monet struggled with depression, poverty, and illness throughout his life. It would be interesting to see how these hardships may have affected his art and if this can be assessed analytically.
-
+FFor the project proposal, please write a short abstract addressing the questions below. You should replace the entire contents of this section with one to two paragraphs addressing the following:
+For our project we are interested in analyzing Monet’s art. On the wiki art page, many of the different works are classified into different categories (ie. genres, styles, medai). We are interested to see if we can make a classifier to be able to group the different works together, such as by landscapes, flowers, and many more. For this specific classifier, we would like to be able to classify Monet’s paintings into four categories: landscape, cityscape, flower painting, people. We think by limiting the amount of categories we will be able to make a more accurate model based on the size of the training data. According to his biography1, Monet struggled with depression, poverty, and illness throughout his life. It would be interesting to see how these hardships may have affected his art and if this can be assessed analytically.
 Our research question is: Can we make a classifier that can correctly identify Monet’s paintings into categories as defined on the wiki art website? We hypothesize that our classifier will have an accuracy score of roughly 60%.
+We will be using a variety of different analyses. We plan to use date data, edge detection, face detection, and a variety of other types of analysis to best fit a classifier. Many of the techniques and libraries demonstrated in class will be used to extract these features. All the used libraries are listed in the technical notes section. Results will be in the form charts and images. Charts will be used to assess the quality/power of the classifier built. Images will be used to depict the art of Monet over time. We are going to utilize the various image techniques used in class to generate features for Monet’s artwork and train a model to classify those works of art into their respective category. A classifier for images was not covered in class so this extension should be interesting and a good learning experience. 
 
-We will be using a variety of different analyses. We plan to use date data, edge detection, face detection, and a variety of other types of analysis to best fit a classifier. Many of the techniques and libraries demonstrated in class will be used to extract these features. Libraries like skimage, scipy, and cv2 may be used – it all depends on the features we find to be important. Of course, other libraries like pandas and numpy. Results will be in the form charts and images. Charts will be used to assess the quality/power of the classifier built. Images will be used to depict the art of Monet over time. We are going to utilize the various image techniques used in class to generate features for Monet’s artwork and train a model to classify those works of art into their respective category. A classifier for images was not covered in class so this extension should be interesting and a good learning experience. 
-
- 
 1: https://www.biography.com/artist/claude-monet
 
 
 ## Data
 
-(10 points) 
-
-This section will describe your data and its origins. Each item should contain a name of the data source, a link to the source, and any necessary background information such as:
-- What is your cultural data source? 
-- When was it made? 
-- Who created the works? 
-- Is it digital native, or is it some kind of scan, recording, photo, etc., of an analog form? 
-
 **Claude Monet Artworks Data Set**
-
+Claude Monet Artworks Data Set
 Source: https://www.wikiart.org/en/claude-monet/all-works
+The data set we will be working with is a complete set of artworks created by the famous French painter, Claude Monet. These works are freely available on www.wikiart.org. The data set consists of 1,365 artworks that were created between the years of 1858 and 1926. Much information is available for each of the works including its title, date of creation, style, genre, and a series of tags related to it. Given that these works were painted and needed to become available in a digital format, photos of the works were taken. The resolution of the images varies across each work. The quality and accuracy of the works are maintained by editors.
 
-The data set we will be working with is a complete set of artworks created by the famous French painter, Claude Monet. These works are freely available on www.wikiart.org. The data set consists of 1,369 artworks that were created between the years of 1858 and 1926. Much information is available for each of the works including its title, date of creation, style, genre, and a series of tags related to it. Given that these works were painted and needed to become available in a digital format, photos of the works were taken. The resolution of the images varies across each work. The quality and accuracy of the works are maintained by editors. 
+
 
 ## Code
 
 (20 points)
 
-This section will link to the various code for your project (stored within this repository). Your code should be executable on datahub, should we choose to replicate your result. This includes code for: 
+We used a variety of different image analyzing techniques to build our classifier. 
+In our repo we have a handful of different files. The first step in building our classifier was getting our image set. We scrapped 1365 Monet images from the Wiki art. Our web scraping function collected, the image path to download, the date, style, and genre. The date and style will be features in our classifier, while we will use genre as our target for classification. From the images themselves we collected image height, width, mean hue, mean saturation, mean value, mean energy, edge count, and whether or not a face was detected. 
+In the web scraping notebook, we ran all of the functions as defined by the script files. The first step was actually web scraping the images and metadata from wiki art. Each iteration was appended to a list and at the end of the web scraping execution, was turned into a dataframe. Additional columns were added onto the dataframe after the feature extractions were run, resulting in a 1365 row dataframe with 11 columns. 
 
-- data acquisition/scraping
-- cleaning
-- analysis
-- generating results. 
+Webscraping.ipynb: running web scraping and feature extracting codes
+Facial_rec.py: code to determine if there is a face or not
+Features.py: extracts mean hue, mean saturation, mean value, height, width, and mean energy
+Infoscape.py: all the code for web scraping that was run in the notebook
+Probablistic_hough_lines.py: counts number of edges as defined by minLineLength =400 and maxLineGap=10
 
-Link each of your notebooks or .py files within this section, and provide a brief explanation of what the code does. Reading this section we should have a sense of how to run your code.
+When building the model, we cleaned the dataframe to only include variables that we deemed meaningful and useful for our classification. Therefore, we omitted the name and category columns, as the goal of the classifier is to predict genre by image features. We also removed images from the dataset that didn’t fall into our main categories: landscape, cityscape, flower painting, or people. This left us with 1311 images for our classifier. Next, to clean our data, we grouped images into decades rather than individual years, and one hot encoded the data to make the data more usable for the classifier. We ordinally encoded the genre options as well. We created a logistic regressor, a K-nearest neighbors regressor, a SVM, a Naive Bayes classifier, and a random forest classifier. 
+
+Model.ipynb: cleaning the dataset for model creation and testing
+
 
 ## Results
 
-(30 points) 
+For our project we chose to analyze Monet’s work and create a genre classifier for his works. 
+Our first notebook Monet_Work_through_the_Decades.ipynb, explores Monet’s paintings by time. 
+Our next notebook explores the classifier side of our analysis.  Claude_Monet_Genre_Classifier.ipynb explores a variety of different classifiers for our image set. 
+
 
 This section will contain links to documentation of your results. This can include figures, sound files, videos, bitmaps, as appropriate to your domain of analysis. Each result should include a brief textual description, and all should be listed below: 
 
@@ -77,14 +76,16 @@ The subsequent paragraphs could address questions including:
 
 ## Team Roles
 
-Provide an account of individual members and their efforts/contributions to the specific tasks you accomplished.
+Myra: Wrote code to web scrape images.
+Enrique: Wrote code to web scrape time, categories, genres, and image features. Created model. 
+Molly: Wrote code to run facial and edge analysis. Created dataframe/csv from compiled web scraping code and image processing to be used in classifier. Updated Abstract and wrote code, and technical notes and dependencies sections.    
+Mariam: Analyzing work through the decades.
+
 
 ## Technical Notes and Dependencies
 
-Any implementation details or notes we need to repeat your work. 
-- Additional libraries you are using for this project
-- Does this code require other pip packages, software, etc?
-- Does this code need to run on some other (non-datahub) platform? (CoLab, etc.)
+For our project, we used libraries that have been previously included in this class. This includes: BeautifulSoup, os, request, pandas, multiple packages from skimage, numpy, scipy, matplotlib, PIL Image, and cv2. These packages allowed us to analyze our images to make our classifier. 
+
 
 ## Reference
 
