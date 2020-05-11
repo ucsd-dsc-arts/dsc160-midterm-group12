@@ -40,7 +40,7 @@ In the web scraping notebook, we ran all of the functions as defined by the scri
 [Webscraping.ipynb](code/webscraping.ipynb): running web scraping and feature extracting codes
 [Facial_rec.py](code/Facial_rec.py): code to determine if there is a face or not
 [Features.py](code/features.py): extracts mean hue, mean saturation, mean value, height, width, and mean energy
-[Infoscape.py](code/infoscape.py): all the code for web scraping that was run in the notebook
+[Infoscape.py](code/infoscrape.py): all the code for web scraping that was run in the notebook
 [Probablistic_hough_lines.py](code/probablistic_hough_lines.py): counts number of edges as defined by minLineLength =400 and maxLineGap=10
 
 When building the model, we cleaned the dataframe to only include variables that we deemed meaningful and useful for our classification. Therefore, we omitted the name and category columns, as the goal of the classifier is to predict genre by image features. We also removed images from the dataset that didn’t fall into our main categories: landscape, cityscape, flower painting, or people. This left us with 1311 images for our classifier. Next, to clean our data, we grouped images into decades rather than individual years, and one hot encoded the data to make the data more usable for the classifier. We ordinally encoded the genre options as well. We created a logistic regressor, a K-nearest neighbors regressor, a SVM, a Naive Bayes classifier, and a random forest classifier. 
